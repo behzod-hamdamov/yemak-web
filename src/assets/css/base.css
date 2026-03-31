@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1128px;
   width: 100%;
