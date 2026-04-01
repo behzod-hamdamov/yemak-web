@@ -1,4 +1,6 @@
-export function ProductsList({products}) {
+import { Products } from "../Products/Products";
+
+export function ProductsList({ products }) {
   return (
     <div className="flex flex-col gap-6">
       {products.data.products.map((product) => (
@@ -9,6 +11,7 @@ export function ProductsList({products}) {
           >
             {product.title}
           </h2>
+          {products && <Products product={product} /> }
         </div>
       ))}
     </div>
