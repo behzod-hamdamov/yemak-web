@@ -1,6 +1,6 @@
 import {useFetch} from "../../hooks"
 
-import { CategoryList } from "../../components";
+import { CategoryList, RestaturantsList } from "../../components";
 
 export function HomePage() {
   const restaurants = useFetch("https://api.yemak.uz/user/restaurant")
@@ -11,6 +11,7 @@ export function HomePage() {
       <div className="container">
         <h1 className="leading-10.5 text-[32px] font-bold pb-5">Restoranlar</h1>
         {categories && <CategoryList categories={categories.data} />}
+        {restaurants && <RestaturantsList restaurants={restaurants.data.restaurants} />}
       </div>
     </main>
   );
