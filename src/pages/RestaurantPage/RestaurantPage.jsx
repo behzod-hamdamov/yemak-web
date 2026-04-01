@@ -14,7 +14,6 @@ export function RestaurantPage() {
   const restaurant =
     restaurants &&
     restaurants.data.restaurants.find((restaurant) => restaurant.id == id);
-  console.log(products);
 
   return (
     <main className="flex-1 pt-8 pb-15">
