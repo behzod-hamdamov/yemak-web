@@ -136,7 +136,7 @@ export function Header() {
     <header className="p-[18px_0] bg-white border border-[rgba(240,240,240,1)] shadow-[0px_6px_20px_0px_rgba(18,40,47,0.06)]">
       <div className="container flex items-center justify-between">
         <nav className="flex items-center gap-6">
-          <Link>
+          <Link to="/">
             <img src={logoIcon} alt="logo" />
           </Link>
           <div className="flex items-center gap-4">
