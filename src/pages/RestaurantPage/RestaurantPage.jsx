@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useFetch } from "../../hooks";
+import { RestaurantBanner } from "../../components";
 
 export function RestaurantPage() {
   const restaurants = useFetch("https://api.yemak.uz/user/restaurant");
@@ -11,6 +12,7 @@ export function RestaurantPage() {
   return (
     <main className="flex-1 pt-8 pb-15">
       <div className="container">
+        {restaurant && (<RestaurantBanner restaurant={restaurant} />)}
       </div>
     </main>
   );
