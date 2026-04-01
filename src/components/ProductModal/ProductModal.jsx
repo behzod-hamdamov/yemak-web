@@ -6,11 +6,11 @@ export function ProductModal({ handleClick, product }) {
 
   return createPortal(
     <div
-      className="flex justify-center items-center fixed w-full h-full top-0 bg-[#0D0D0DE0]"
+      className="flex justify-center items-center fixed w-full h-full top-0 bg-[#0D0D0DE0] cursor-pointer"
       onClick={handleClick}
     >
       <div
-        className="flex flex-col gap-5 relative p-5 bg-white rounded-[20px]"
+        className="flex flex-col gap-5 relative p-5 bg-white rounded-[20px] cursor-auto"
         onClick={(e) => {
           e.stopPropagation();
         }}

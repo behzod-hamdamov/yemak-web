@@ -7,8 +7,8 @@ export function Product({ product }) {
   const [modal, setModal] = useState(false);
 
   function handleClick(e) {
-    e.stopPropagation()
-    setModal(!modal)
+    e.stopPropagation();
+    setModal(!modal);
   }
 
   return (
@@ -16,12 +16,14 @@ export function Product({ product }) {
       className="bg-white rounded-2xl overflow-hidden cursor-pointer"
       onClick={handleClick}
     >
-      <img
-        src={product.photo}
-        alt="product"
-        className="min-h-43 object-cover"
-      />
-      <div className="pt-2 pb-3 p-[0_12px]">
+      <div className="overflow-hidden">
+        <img
+          src={product.photo}
+          alt="product"
+          className="min-h-43 object-cover hover:scale-[1.1] -z-1 duration-300 ease-out"
+        />
+      </div>
+      <div className="pt-2 pb-3 p-[0_12px] bg-white">
         <h5 className="leading-4.5 text-sm font-semibold pb-1">
           {product.name}
         </h5>
