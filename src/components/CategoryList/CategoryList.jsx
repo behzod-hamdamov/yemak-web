@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { CategoryItem } from "../CategoryItem/CategoryItem";
 
-export function CategoryList({ categories }) {
+export const CategoryList = memo(({ categories }) => {
 
   return (
     <ul className="flex gap-1 overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] p-2 bg-white rounded-xl">
@@ -9,4 +10,4 @@ export function CategoryList({ categories }) {
       ))}
     </ul>
   );
-}
+})

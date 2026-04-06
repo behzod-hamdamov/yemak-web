@@ -1,8 +1,10 @@
 import { createPortal } from "react-dom";
 
+import { memo } from "react";
+
 import { splitPrice } from "../../utils/helper";
 
-export function ProductModal({ handleClick, product }) {
+export const ProductModal = memo(({ handleClick, product }) => {
 
   return createPortal(
     <div
@@ -62,4 +64,4 @@ export function ProductModal({ handleClick, product }) {
     </div>,
     document.body
   );
-}
+})

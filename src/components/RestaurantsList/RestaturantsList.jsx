@@ -1,6 +1,8 @@
+import { memo } from "react";
+
 import { RestaurantItem } from "../RestaurantItem/RestaurantItem";
 
-export function RestaturantsList({ restaurants }) {
+export const RestaturantsList = memo(({ restaurants }) => {
   return (
     <ul className="pt-8 grid grid-cols-3 gap-6 pb-13">
       {restaurants.map((restaurant) => (
@@ -8,4 +10,4 @@ export function RestaturantsList({ restaurants }) {
       ))}
     </ul>
   );
-}
+})

@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
 
 import { splitPrice } from "../../utils/helper";
 import { ProductModal } from "../ProductModal/ProductModal";
 
-export function Product({ product }) {
+export const Product = memo(({ product }) => {
   const [modal, setModal] = useState(false);
 
-  function handleClick(e) {
+  const handleClick = useCallback((e) => {
     e.stopPropagation();
     setModal(!modal);
-  }
+  }, [modal])
 
   return (
     <li
@@ -41,4 +41,4 @@ export function Product({ product }) {
       {modal && <ProductModal handleClick={handleClick} product={product} />}
     </li>
   );
-}
+})

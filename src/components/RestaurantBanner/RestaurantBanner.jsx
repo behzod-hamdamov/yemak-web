@@ -1,4 +1,6 @@
-export function RestaurantBanner({restaurant}) {
+import { memo } from "react";
+
+export const RestaurantBanner = memo(({restaurant}) => {
   return (
     <div className="overflow-hidden relative min-h-58.75 rounded-[20px]">
       <img
@@ -19,4 +21,4 @@ export function RestaurantBanner({restaurant}) {
       </div>
     </div>
   );
-}
+})

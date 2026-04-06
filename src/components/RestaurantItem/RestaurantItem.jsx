@@ -1,6 +1,7 @@
 import { Link } from "react-router";
+import { memo } from "react";
 
-export function RestaurantItem({ restaurant }) {
+export const RestaurantItem = memo(({ restaurant }) => {
   return (
     <li className="bg-white rounded-2xl">
       <Link to={"restaurant/" + restaurant.id}>
@@ -16,4 +17,4 @@ export function RestaurantItem({ restaurant }) {
       </Link>
     </li>
   );
-}
+})

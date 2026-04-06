@@ -1,6 +1,8 @@
+import { memo } from "react";
+
 import { Products } from "../Products/Products";
 
-export function ProductsList({ products }) {
+export const ProductsList = memo(({ products }) => {
   return (
     <div className="flex flex-col gap-6">
       {products.data.products.map((product) => (
@@ -16,4 +18,4 @@ export function ProductsList({ products }) {
       ))}
     </div>
   );
-}
+})
